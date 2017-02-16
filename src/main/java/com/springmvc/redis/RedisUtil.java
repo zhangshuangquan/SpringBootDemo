@@ -1,6 +1,5 @@
 package com.springmvc.redis;
 
-import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -9,7 +8,6 @@ import redis.clients.jedis.JedisPoolConfig;
  * Created by zsq on 2017/2/16.
  * 获取 Redis 连接操作类
  */
-@Component
 public class RedisUtil {
 
     private static String HOST = "127.0.0.1";    //Redis 主机地址

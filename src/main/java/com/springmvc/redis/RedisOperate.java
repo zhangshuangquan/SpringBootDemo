@@ -167,8 +167,6 @@ public class RedisOperate {
         System.out.println(jedis.lrange("a", 0, -1));  //[9, 3, 6, 1]
     }
 
-
-
     /*public static void main(String[] args) {
         Jedis jedis = RedisUtil.getJedis();
         jedis.set("jedis", "java operate redis");
