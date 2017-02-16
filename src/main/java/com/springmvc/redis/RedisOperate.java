@@ -70,7 +70,7 @@ public class RedisOperate {
             System.out.println(key +"--"+jedis.hget("user", key));
         }
 
-        System.out.println(jedis.hgetAll("user"));  //获取 map 包括键值
+        System.out.println(jedis.hgetAll("user"));  //获取 map 包括键值 {name=zsq, addr=hangzhou, id=1}
     }
 
     /**
@@ -167,6 +167,8 @@ public class RedisOperate {
         System.out.println(jedis.lrange("a", 0, -1));  // [9, 3, 6, 1]
         System.out.println(jedis.sort("a"));  // [1,3,6,9]
         System.out.println(jedis.lrange("a", 0, -1));  //[9, 3, 6, 1]
+
+       //  System.out.println(jedis.scard("a"));  scard 命令用于在集合中操作
     }
 
     /*public static void main(String[] args) {
