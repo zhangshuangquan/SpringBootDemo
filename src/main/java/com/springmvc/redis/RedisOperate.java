@@ -69,6 +69,8 @@ public class RedisOperate {
             String key = iterator.next();
             System.out.println(key +"--"+jedis.hget("user", key));
         }
+
+        System.out.println(jedis.hgetAll("user"));  //获取 map 包括键值
     }
 
     /**
