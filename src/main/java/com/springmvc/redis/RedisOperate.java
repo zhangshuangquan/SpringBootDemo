@@ -168,7 +168,7 @@ public class RedisOperate {
         System.out.println(jedis.sort("a"));  // [1,3,6,9]
         System.out.println(jedis.lrange("a", 0, -1));  //[9, 3, 6, 1]
 
-       //  System.out.println(jedis.scard("a"));  scard 命令用于在集合中操作
+       //  System.out.println(jedis.scard("a"));  scard 命令用于在集合set中操作
     }
 
     /*public static void main(String[] args) {
