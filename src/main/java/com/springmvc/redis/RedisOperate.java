@@ -5,6 +5,7 @@ import org.junit.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Tuple;
 
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /**
@@ -169,6 +170,25 @@ public class RedisOperate {
         System.out.println(jedis.lrange("a", 0, -1));  //[9, 3, 6, 1]
 
        //  System.out.println(jedis.scard("a"));  scard 命令用于在集合set中操作
+    }
+
+    @Test
+    public void testDemo() throws UnsupportedEncodingException {
+        String[] element = {"java", "c", "c++", "c#", "php"};
+        for (String str : element) {
+
+            System.out.println("byte default (ISO-8859-1) arrays: "+ str.getBytes());  //字节数组对象
+            System.out.println("byte UTF-8 arrays: "+ str.getBytes("UTF-8"));
+
+            System.out.println("-----------------------------------------------------");
+
+            //转为String后,以下两者相同,因为是同一个数组对象,并且String 常量
+            System.out.println("transfer string (ISO-8859-1): "+ Arrays.toString(str.getBytes()));
+            System.out.println("transfer string (UTF-8): "+ Arrays.toString(str.getBytes("UTF-8")));
+
+            System.out.println("-----------------------------------------------------");
+        }
+
     }
 
     /*public static void main(String[] args) {
