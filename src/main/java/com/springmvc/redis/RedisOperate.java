@@ -14,7 +14,7 @@ import java.util.*;
  */
 public class RedisOperate {
 
-    private static Jedis jedis = RedisUtil.getJedis();
+    private static Jedis jedis = RedisUtils.getJedis();
 
     /***
      * redis 存储字符串

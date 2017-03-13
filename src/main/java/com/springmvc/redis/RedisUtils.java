@@ -8,7 +8,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * Created by zsq on 2017/2/16.
  * 获取 Redis 连接操作类
  */
-public class RedisUtil {
+public class RedisUtils {
 
     private static String HOST = "127.0.0.1";    //Redis 主机地址
 
